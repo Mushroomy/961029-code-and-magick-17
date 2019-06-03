@@ -188,17 +188,15 @@
             return left ? 5 : 2;
         },
         wizardSpeed = 3,
-        wizardWidth = 70;
-    
-        function getWizardHeight(){
-            return 1.337 * wizardWidth;
-        };
-    
-        function getWizardX(width){
+        wizardWidth = 70,
+        HEIGHT_RATIO = 1.337,
+        getWizardHeight = function(){
+            return HEIGHT_RATIO * wizardWidth;
+        },
+        getWizardX = function(width){
             return width / 2 - wizardWidth / 2;
-        };
-    
-        function getWizardY(height){
+        },
+        getWizardY = function(height){
             return height / 3 - getWizardHeight();
         };
 </script>
