@@ -60,11 +60,11 @@ var createWizards = function () {
       name: names[i] + ' ' + surnames[i],
       coatColor: coatColor[i],
       eyesColor: eyesColor[i]
-    }
+    };
   }
 
   return wizards;
-}
+};
 
 createWizards();
 
@@ -79,7 +79,7 @@ var renderWizard = function (wizard) {
   wizardElement.querySelector('.wizard-eyes').style.fill = wizard.eyesColor;
 
   return wizardElement;
-}
+};
 
 var fragment = document.createDocumentFragment();
 for (var i = 0; i < WIZARDS_LENGTH; i++) {
