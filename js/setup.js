@@ -42,15 +42,15 @@ var eyesColor = [
 
 function getRndInteger(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
-};
+}
 
 var wizards = [];
 var createWizards = function () {
   for (var i = 0; i < WIZARDS_LENGTH; i++) {
     wizards[i] = {
-      name: names[getRndInteger(0,names.length)] + ' ' + surnames[getRndInteger(0,surnames.length)],
-      coatColor: coatColor[getRndInteger(0,coatColor.length)],
-      eyesColor: eyesColor[getRndInteger(0,eyesColor.length)]
+      name: names[getRndInteger(0, names.length)] + ' ' + surnames[getRndInteger(0, surnames.length)],
+      coatColor: coatColor[getRndInteger(0, coatColor.length)],
+      eyesColor: eyesColor[getRndInteger(0, eyesColor.length)]
     };
   }
 
