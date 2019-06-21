@@ -4,15 +4,6 @@ var setup = document.querySelector('.setup');
 setup.classList.remove('hidden');
 var WIZARDS_LENGTH = 4;
 
-function shuffleArray(array) {
-  for (var i = array.length - 1; i > 0; i--) {
-    var j = Math.floor(Math.random() * (i + 1));
-    var temp = array[i];
-    array[i] = array[j];
-    array[j] = temp;
-  }
-}
-
 var names = [
   'Иван',
   'Хуан Себастьян',
@@ -48,18 +39,18 @@ var eyesColor = [
   'yellow',
   'green'
 ];
-shuffleArray(names);
-shuffleArray(surnames);
-shuffleArray(coatColor);
-shuffleArray(eyesColor);
+
+function getRndInteger(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+};
 
 var wizards = [];
 var createWizards = function () {
   for (var i = 0; i < WIZARDS_LENGTH; i++) {
     wizards[i] = {
-      name: names[i] + ' ' + surnames[i],
-      coatColor: coatColor[i],
-      eyesColor: eyesColor[i]
+      name: names[getRndInteger(0,names.length)] + ' ' + surnames[getRndInteger(0,surnames.length)],
+      coatColor: coatColor[getRndInteger(0,coatColor.length)],
+      eyesColor: eyesColor[getRndInteger(0,eyesColor.length)]
     };
   }
 
